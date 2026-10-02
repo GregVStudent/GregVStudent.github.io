@@ -1,41 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greg Varjabedian | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        slate: {
-                            850: '#111827',
-                            900: '#0f172a',
-                            950: '#020617',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col">
 
-    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                <span class="bg-blue-600 text-white w-8 h-8 rounded-lg flex items-center justify-center text-sm font-extrabold shadow-lg shadow-blue-500/30">GV</span>
-                <span>Greg Varjabedian</span>
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-white hover:text-blue-400 transition-colors">
+                Greg Varjabedian
             </a>
             <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
                 <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
@@ -43,198 +21,162 @@
                 <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
                 <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
             </nav>
-            <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-md transition-all">
-                Get in Touch
-            </a>
         </div>
     </header>
 
-    <main class="flex-grow pt-24">
-        <section id="hero" class="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-            <div class="flex-1 text-center md:text-left space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
-                    <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span> Open to Opportunities
-                </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Greg Varjabedian</span>
+    <!-- Main Content -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-6 py-12 space-y-20">
+
+        <!-- Hero Section -->
+        <section class="flex flex-col-reverse md:flex-row items-center justify-between gap-10 pt-8 pb-12 border-b border-slate-800">
+            <div class="flex-1 space-y-4 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                    Greg Varjabedian
                 </h1>
-                <p class="text-slate-400 text-lg md:text-xl max-w-2xl leading-relaxed">
-                    Passionate developer crafting modern, high-performance web applications and digital experiences with clean architecture and intuitive user experiences.
+                <p class="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl">
+                    I am an ambitious business student dedicated to strong work ethics, continuous learning, and creating value through disciplined problem-solving.
                 </p>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
-                    <a href="#projects" class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium transition-all shadow-lg shadow-blue-600/25">
+                <div class="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-medium rounded-lg shadow-lg transition-colors">
                         View Projects
                     </a>
-                    <a href="#contact" class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium transition-all">
-                        Contact Me
+                    <a href="#contact" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium rounded-lg border border-slate-700 transition-colors">
+                        Get In Touch
                     </a>
                 </div>
             </div>
-
-            <div class="relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
-                <div class="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-slate-800 bg-slate-900 shadow-2xl">
-                    <img src="headshot.jpeg" alt="Greg Varjabedian" class="w-full h-full object-cover">
-                </div>
+            
+            <!-- Profile Headshot Image -->
+            <div class="flex-shrink-0 w-44 h-44 md:w-56 md:h-56 rounded-full p-1 bg-gradient-to-tr from-blue-500 to-indigo-500 shadow-2xl">
+                <img src="headshot.jpeg" alt="Greg Varjabedian" class="w-full h-full object-cover rounded-full border-4 border-slate-900 shadow-inner">
             </div>
         </section>
 
-        <section id="about" class="bg-slate-900/50 py-16 border-y border-slate-800/80">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-white">About Me</h2>
-                    <div class="w-16 h-1 bg-blue-500 mx-auto rounded-full"></div>
-                </div>
-                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 md:p-10 shadow-xl max-w-4xl mx-auto leading-relaxed text-slate-300 space-y-4">
-                    <p class="text-lg">
-                        Welcome to my portfolio! I am Greg Varjabedian, a software enthusiast devoted to building sleek, responsive, and robust digital solutions. With a focus on modern software development practices, I enjoy turning complex problems into elegant, user-friendly code.
-                    </p>
-                    <p>
-                        Whether designing intuitive interfaces or engineering scalable back-end infrastructure, my goal is to deliver efficient software that makes a real impact. I constantly strive to expand my technical stack and adopt new tools that streamline development workflows.
-                    </p>
-                </div>
+        <!-- Section 1: Personal Statement / About Me -->
+        <section id="about" class="scroll-mt-24 space-y-6">
+            <div class="border-l-4 border-blue-500 pl-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">About Me</h2>
+                <p class="text-sm text-slate-400">Personal Statement & Core Philosophy</p>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-4 text-slate-300 leading-relaxed text-base md:text-lg">
+                <p>
+                    As a dedicated business student, I combine strategic analytical thinking with a proactive, hands-on approach to leadership and execution. My academic journey centers on understanding modern business operations, financial fundamentals, and organizational growth strategies.
+                </p>
+                <p>
+                    I thrive in environments where hard work, attention to detail, and accountability drive measurable outcomes. Whether managing complex projects, analyzing market dynamics, or working closely in cross-functional teams, I am always seeking opportunities to expand my skill set and deliver tangible value.
+                </p>
             </div>
         </section>
 
-        <section id="skills" class="max-w-6xl mx-auto px-6 py-20">
-            <div class="text-center space-y-4 mb-12">
-                <h2 class="text-3xl font-bold tracking-tight text-white">Technical Skills</h2>
-                <div class="w-16 h-1 bg-blue-500 mx-auto rounded-full"></div>
+        <!-- Section 2: Skills Area -->
+        <section id="skills" class="scroll-mt-24 space-y-6">
+            <div class="border-l-4 border-blue-500 pl-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Skills & Competencies</h2>
+                <p class="text-sm text-slate-400">Core Areas of Expertise</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Frontend -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition-all">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 mb-4 text-xl">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Frontend Development</h3>
-                    <ul class="space-y-2 text-slate-400 text-sm">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> HTML5 & CSS3</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> JavaScript (ES6+)</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> React / Next.js</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Tailwind CSS</li>
+                <!-- Business & Strategy Card -->
+                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-6 space-y-4">
+                    <h3 class="text-xl font-semibold text-blue-400">Business Strategy</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Business Analysis & Strategy</li>
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Market Research & Operations</li>
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Financial Fundamentals</li>
                     </ul>
                 </div>
 
-                <!-- Backend -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition-all">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 mb-4 text-xl">
-                        <i class="fa-solid fa-server"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Backend & Databases</h3>
-                    <ul class="space-y-2 text-slate-400 text-sm">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Node.js & Express</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Python</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> RESTful APIs</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> PostgreSQL & MongoDB</li>
+                <!-- Professional Leadership Card -->
+                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-6 space-y-4">
+                    <h3 class="text-xl font-semibold text-blue-400">Professional Leadership</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Team Leadership & Management</li>
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Strategic Communication</li>
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Project Execution & Planning</li>
                     </ul>
                 </div>
 
-                <!-- Tools & Methods -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition-all">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-400 mb-4 text-xl">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Tools & Practices</h3>
-                    <ul class="space-y-2 text-slate-400 text-sm">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Git & GitHub</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Docker & CI/CD</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> Agile Methodologies</li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-blue-400 text-xs"></i> UI/UX Design Principles</li>
+                <!-- Technical & Analytical Tools Card -->
+                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-6 space-y-4">
+                    <h3 class="text-xl font-semibold text-blue-400">Tools & Analytics</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Microsoft Office / Excel Analytics</li>
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Data Visualization & Reporting</li>
+                        <li class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-blue-500"></span> Digital Collaboration Tools</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="bg-slate-900/50 py-20 border-t border-slate-800">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center space-y-4 mb-12">
-                    <h2 class="text-3xl font-bold tracking-tight text-white">Featured Projects</h2>
-                    <div class="w-16 h-1 bg-blue-500 mx-auto rounded-full"></div>
+        <!-- Section 3: Projects Area -->
+        <section id="projects" class="scroll-mt-24 space-y-6">
+            <div class="border-l-4 border-blue-500 pl-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">Projects</h2>
+                <p class="text-sm text-slate-400">Featured Business Case Studies & Initiatives</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-6 flex flex-col justify-between space-y-4 hover:border-slate-700 transition-colors">
+                    <div>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-blue-950 text-blue-400 border border-blue-800 rounded-full">Business Strategy</span>
+                        <h3 class="text-xl font-bold text-white mt-3">Market Strategy & Expansion Plan</h3>
+                        <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                            Developed a comprehensive business plan analyzing competitive positioning, target demographic trends, and revenue forecasting for a market entry strategy.
+                        </p>
+                    </div>
+                    <div class="pt-2">
+                        <a href="#" class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors">
+                            View Case Study &rarr;
+                        </a>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Project 1 -->
-                    <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-slate-700 transition-all group flex flex-col justify-between">
-                        <div class="p-6 space-y-4">
-                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Full-Stack Application</span>
-                            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">Analytics Dashboard</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                A modern data visualization dashboard offering real-time telemetry, customizable widgets, and secure authentication.
-                            </p>
-                            <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">React</span>
-                                <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">Tailwind CSS</span>
-                                <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">Node.js</span>
-                            </div>
-                        </div>
-                        <div class="px-6 pb-6 pt-2 flex gap-4">
-                            <a href="#" class="text-sm font-medium text-slate-300 hover:text-white flex items-center gap-1">
-                                <i class="fa-brands fa-github"></i> Code
-                            </a>
-                            <a href="#" class="text-sm font-medium text-blue-400 hover:text-blue-300 flex items-center gap-1">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
-                            </a>
-                        </div>
+                <!-- Project 2 -->
+                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-6 flex flex-col justify-between space-y-4 hover:border-slate-700 transition-colors">
+                    <div>
+                        <span class="text-xs font-semibold px-2.5 py-1 bg-blue-950 text-blue-400 border border-blue-800 rounded-full">Financial Analysis</span>
+                        <h3 class="text-xl font-bold text-white mt-3">Financial Performance Valuation</h3>
+                        <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                            Conducted in-depth financial analysis evaluating corporate balance sheets, profitability metrics, and risk assessment to derive strategic recommendations.
+                        </p>
                     </div>
-
-                    <!-- Project 2 -->
-                    <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden hover:border-slate-700 transition-all group flex flex-col justify-between">
-                        <div class="p-6 space-y-4">
-                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">Web Service</span>
-                            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">E-Commerce Platform API</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                Scalable REST backend providing product catalog management, order processing, and payment integration.
-                            </p>
-                            <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">Express</span>
-                                <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">PostgreSQL</span>
-                                <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">Docker</span>
-                            </div>
-                        </div>
-                        <div class="px-6 pb-6 pt-2 flex gap-4">
-                            <a href="#" class="text-sm font-medium text-slate-300 hover:text-white flex items-center gap-1">
-                                <i class="fa-brands fa-github"></i> Code
-                            </a>
-                            <a href="#" class="text-sm font-medium text-blue-400 hover:text-blue-300 flex items-center gap-1">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
-                            </a>
-                        </div>
+                    <div class="pt-2">
+                        <a href="#" class="inline-flex items-center text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors">
+                            View Case Study &rarr;
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="max-w-6xl mx-auto px-6 py-20">
-            <div class="max-w-2xl mx-auto text-center space-y-6">
-                <h2 class="text-3xl font-bold tracking-tight text-white">Let's Connect</h2>
-                <p class="text-slate-400">
-                    I'm always open to discussing new projects, creative ideas, or opportunities to collaborate.
+        <!-- Contact Section -->
+        <section id="contact" class="scroll-mt-24 space-y-6">
+            <div class="bg-gradient-to-r from-blue-900/40 to-slate-900/80 border border-blue-800/40 rounded-2xl p-8 text-center space-y-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-white">Let's Connect</h2>
+                <p class="text-slate-300 max-w-xl mx-auto text-sm md:text-base">
+                    I am always open to discussing new business opportunities, strategic collaborations, or networking. Feel free to reach out directly!
                 </p>
-                <div class="flex justify-center gap-6 pt-4">
-                    <a href="mailto:greg@example.com" class="w-12 h-12 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center text-slate-300 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all text-xl" title="Email">
-                        <i class="fa-solid fa-envelope"></i>
+                <div class="pt-2 flex flex-wrap gap-4 justify-center">
+                    <a href="mailto:your-email@example.com" class="px-6 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors">
+                        Email Me
                     </a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center text-slate-300 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all text-xl" title="GitHub">
-                        <i class="fa-brands fa-github"></i>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-sm font-medium rounded-lg transition-colors">
+                        LinkedIn Profile
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-slate-900 border border-slate-800 rounded-xl flex items-center justify-center text-slate-300 hover:text-white hover:border-blue-500 hover:bg-blue-500/10 transition-all text-xl" title="LinkedIn">
-                        <i class="fa-brands fa-linkedin-in"></i>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-sm font-medium rounded-lg transition-colors">
+                        GitHub Profile
                     </a>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <footer class="border-t border-slate-800/80 py-8 bg-slate-950 text-center text-slate-500 text-sm">
-        <div class="max-w-6xl mx-auto px-6">
-            <p>&copy; <span id="year"></span> Greg Varjabedian. All rights reserved.</p>
-        </div>
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-500">
+        <p>&copy; Greg Varjabedian. Built with HTML & Tailwind CSS.</p>
     </footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
